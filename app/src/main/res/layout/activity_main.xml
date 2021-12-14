@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="287dp"
+        android:text="Result: 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/number1Text"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/number1Text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Enter number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2Text"
+        app:layout_constraintEnd_toEndOf="@+id/number2Text"
+        app:layout_constraintStart_toStartOf="@+id/number2Text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2Text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter number 2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/number1Text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Text">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="sum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="deduct"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="multiply"
+            android:text="×" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="divide"
+            android:text="÷" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
